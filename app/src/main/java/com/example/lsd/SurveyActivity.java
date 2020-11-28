@@ -1,6 +1,7 @@
 package com.example.lsd;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.widget.ListView;
@@ -10,8 +11,7 @@ import java.util.ArrayList;
 public class SurveyActivity extends AppCompatActivity {
 
     ArrayList<Product> products = new ArrayList();
-    ListView productList;
-
+    RecyclerView recyclerView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,9 +24,11 @@ public class SurveyActivity extends AppCompatActivity {
             products.add(new Product("Молоко"));
             products.add(new Product("Макароны"));
         }
-        productList = (ListView) findViewById(R.id.list);
-        Adapter adapter = new Adapter(this, R.layout.listitem, products);
-        productList.setAdapter(adapter);
+        recyclerView = (RecyclerView) findViewById(R.id.res);
+        // создаем адаптер
+        ResAdapter adapter = new ResAdapter(this, products);
+        // устанавливаем для списка адаптер
+        recyclerView.setAdapter(adapter);
 
     }
 }
