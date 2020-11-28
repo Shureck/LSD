@@ -26,33 +26,37 @@
                 android:textSize="24sp"/>
 
             <RadioGroup
+                android:id="@+id/r_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/textView"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent">
+                app:layout_constraintTop_toBottomOf="@id/textView">
 
                 <RadioButton
                     android:id="@+id/radioButton1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Да"
-                    android:textSize="20sp"
                     android:buttonTint="@color/purple_700"
-                    />
+                    android:text="Да"
+                    android:textSize="20sp" />
+
                 <RadioButton
+                    android:id="@+id/radioBtn2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:buttonTint="@color/purple_700"
                     android:text="Нет"
-                    android:textSize="20sp"
-                    android:buttonTint="@color/purple_700"/>
+                    android:textSize="20sp" />
+
                 <RadioButton
+                    android:id="@+id/radioBtn3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:buttonTint="@color/purple_700"
                     android:text="Нет в городе/Не знаю"
-                    android:textSize="20sp"
-                    android:buttonTint="@color/purple_700"/>
+                    android:textSize="20sp" />
 
 
             </RadioGroup>
