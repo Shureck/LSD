@@ -32,20 +32,41 @@ public class ResAdapter extends RecyclerView.Adapter<ResAdapter.ViewHolder> {
         Product product = phones.get(position);
         holder.nameView.setText(product.getAsk());
         holder.radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-
+        SurveyActivity surveyActivity = new SurveyActivity();
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch (checkedId) {
                     case -1:
                         break;
                     case R.id.radioButton1:
-                        System.out.println("Я первый");
+                        System.out.println("Я первый "+position);
+                        new SurveyActivity.IOAsyncTask().execute("mutation {" +
+                                "createDatum(input: {datum: {" +
+                                "c43:"+  1 +"," +
+                                "}}) {" +
+                                "datum {" +
+                                "id" +
+                                "}" +
+                                "}" +
+                                "}");
+                        surveyActivity.arr[position] = 1;
                         break;
                     case R.id.radioBtn2:
-                        System.out.println("Я второй");
+                        System.out.println("Я второй "+position);
+                        new SurveyActivity.IOAsyncTask().execute("mutation {" +
+                                "createDatum(input: {datum: {" +
+                                "c43:"+  0 +"," +
+                                "}}) {" +
+                                "datum {" +
+                                "id" +
+                                "}" +
+                                "}" +
+                                "}");
+                        surveyActivity.arr[position] = 0;
                         break;
                     case R.id.radioBtn3:
-                        System.out.println("Я третий");
+                        System.out.println("Я третий "+position);
+                        surveyActivity.arr[position] = -1;
                         break;
 
                     default:
