@@ -18,11 +18,12 @@ public class SurveyActivity extends AppCompatActivity {
         setContentView(R.layout.activity_survey);
 
         if(products.size()==0){
-            products.add(new Product("Картофель"));
-            products.add(new Product("Чай"));
-            products.add(new Product("Яйца"));
-            products.add(new Product("Молоко"));
-            products.add(new Product("Макароны"));
+            products.add(new Product("Помогает ли Вам бесплатный общественный Wi-Fi?"));
+            products.add(new Product("Упростил ли каршеринг Ваше передвижение по городу?"));
+            products.add(new Product("Упрощают ли городские онлайн-сервисы ведение бизнеса?"));
+            products.add(new Product("Упростила ли процесс получения медпомощи онлайн-запись к врачу?"));
+            products.add(new Product("Онлайн-расписание транспорта упростило пользование им?"));
+            products.add(new Product("Повышают ли дорожные камеры безопасность дорожного движения?"));
         }
         recyclerView = (RecyclerView) findViewById(R.id.res);
         // создаем адаптер

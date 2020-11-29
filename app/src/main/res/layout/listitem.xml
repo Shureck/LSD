@@ -9,12 +9,12 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp"
         android:layout_margin="4dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="8dp">
 
             <TextView
                 android:id="@+id/textView"
@@ -24,7 +24,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:text="Тестовый вопрос"
-                android:textSize="24sp"/>
+                android:textSize="20sp"/>
 
             <RadioGroup
                 android:id="@+id/r_group"
@@ -39,7 +39,7 @@
                     android:id="@+id/radioButton1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:buttonTint="@color/purple_700"
+                    android:buttonTint="@color/blue"
                     android:text="Да"
                     android:textSize="20sp" />
 
@@ -47,7 +47,7 @@
                     android:id="@+id/radioBtn2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:buttonTint="@color/purple_700"
+                    android:buttonTint="@color/blue"
                     android:text="Нет"
                     android:textSize="20sp" />
 
@@ -55,7 +55,7 @@
                     android:id="@+id/radioBtn3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:buttonTint="@color/purple_700"
+                    android:buttonTint="@color/blue"
                     android:text="Нет в городе/Не знаю"
                     android:textSize="20sp" />
 
