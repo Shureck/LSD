@@ -26,9 +26,7 @@ public class SurveyActivity extends AppCompatActivity {
             products.add(new Product("Повышают ли дорожные камеры безопасность дорожного движения?"));
         }
         recyclerView = (RecyclerView) findViewById(R.id.res);
-        // создаем адаптер
         ResAdapter adapter = new ResAdapter(this, products);
-        // устанавливаем для списка адаптер
         recyclerView.setAdapter(adapter);
 
     }
